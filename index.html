@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic 3D Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, .gallery-header, .about-header-center, .gallery-container, .lightbox-content {
+            font-family: 'Lucida Sans', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida', Arial, sans-serif;
+        }
+        .about-header-center {
+            color: #fff;
+            text-shadow:
+                0 0 8px #00eaff,
+                0 0 16px #00eaff,
+                0 0 32px #0077ff,
+                0 0 2px #fff;
+        }
+        .about-header-center h2 {
+            color: #fff;
+            text-shadow:
+                0 0 10px #ff6ec7,
+                0 0 20px #ff6ec7,
+                0 0 40px #fff;
+        }
+        .about-header-center p {
+            color: #fff;
+            text-shadow:
+                0 0 6px #00eaff,
+                0 0 12px #0077ff;
+        }
+        .about-header-center ul li {
+            color: #fff;
+            text-shadow:
+                0 0 6px #00eaff,
+                0 0 12px #0077ff;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="particles-container" id="particles-js"></div>
+    
+    <header class="gallery-header">
+        <h1 class="glowing-title">Cosmic 3D Gallery</h1>
+        <p class="subtitle">Explore the wonders of the universe</p>
+        <div class="about-header-center">
+            <p style="margin-bottom:12px;">
+                Welcome to the Cosmic 3D Gallery, an immersive web experience designed to showcase the wonders of the universe through stunning images and interactive effects. Explore a vast collection of cosmic, nature, and travel photographs, all presented in a visually engaging 3D gallery. Use the search and category filters to discover your favorite themes, and enjoy smooth transitions, lazy loading, and a modern lightbox for detailed viewing. Whether you're a space enthusiast, a lover of art, or simply seeking inspiration, this gallery brings the cosmos to your fingertips.
+            </p>
+            <ul style="text-align:left; display:inline-block; margin-bottom:0;">
+                <li>Browse hundreds of high-quality images from various categories</li>
+                <li>Experience 3D hover effects and smooth infinite scrolling</li>
+                <li>Filter images by category or search for specific topics</li>
+                <li>Enjoy a beautiful, responsive design on any device</li>
+            </ul>
+
+
+
+
+        <div class="header-controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search cosmic images...">
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <div class="categories-container">
+                <button class="category-dropdown-btn" id="categoryDropdownBtn">
+                    <i class="fas fa-filter"></i> Categories
+                </button>
+                <div class="category-dropdown-content" id="categoryDropdown">
+                    <!-- Categories will be loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About section moved above search bar in header -->
+
+    <div class="gallery-container">
+        <div class="gallery-grid" id="galleryGrid"></div>
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="spinner"><i class="fas fa-spinner fa-spin"></i></div>
+            <p>Loading cosmic wonders...</p>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <img class="lightbox-img" id="lightboxImg">
+            <div class="image-info">
+                <h2 class="glowing-title" id="imageTitle"></h2>
+                <p id="imageDescription"></p>
+            </div>
+            <div class="image-attribution" id="imageAttribution"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
